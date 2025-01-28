@@ -13,6 +13,7 @@ services:
       - "--providers.docker.exposedbydefault=false"
       - "--entrypoints.web.address=:80"
       - "--entrypoints.web-secure.address=:443"
+      - "--global.checkNewVersion=false"
       - "--global.sendanonymoususage=false"
       - "--api.disabledashboardad=true"
     ports:

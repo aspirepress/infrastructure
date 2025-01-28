@@ -1,0 +1,12 @@
+node_modules/
+tmp/
+vendor/
+
+*.bak
+*.log
+*.orig
+*.rej
+*.tmp
+*~
+
+docker-compose.override.yml

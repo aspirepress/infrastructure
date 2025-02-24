@@ -9,4 +9,9 @@ vendor/
 *.tmp
 *~
 
-docker-compose.override.yml
+*.local.toml
+*.local.yaml
+*.local.yml
+*.override.toml
+*.override.yaml
+*.override.yml

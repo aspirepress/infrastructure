@@ -1,0 +1,31 @@
+providers:
+  file:
+    directory: "/etc/traefik/traefik-config.d"
+    watch: true
+
+  docker:
+    network: traefik
+    exposedByDefault: false
+
+entrypoints:
+  web:
+    address: ":80"
+  web-secure:
+    address: ":443"
+
+api:
+  dashboard: true
+  insecure: true  # fine for local dev, and by default the port isn't exposed on the host
+  disableDashboardAd: true
+
+log:
+  format: json
+  level: DEBUG
+
+accessLog:
+  format: json
+
+global:
+  checkNewVersion: false
+  sendAnonymousUsage: false
+

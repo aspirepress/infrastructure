@@ -1,0 +1,10 @@
+tls:
+  stores:
+    default:
+      defaultCertificate:
+        certFile: /etc/traefik/certs/aspiredev.crt
+        keyFile: /etc/traefik/certs/aspiredev.key
+
+  certificates:
+    - certFile: /etc/traefik/certs/aspiredev.crt
+      keyFile: /etc/traefik/certs/aspiredev.key

@@ -8,6 +8,14 @@
 
 _(Windows users, **including WSL2**: edit `C:\Windows\System32\drivers\etc\hosts` instead of /etc/hosts)_
 
+## HOWTO: self-signed certs that pass validation  
+
+```shell
+brew install mkcert     # also available on most other package managers
+mkcert -install
+mkcert -cert-file certs/aspiredev.crt -key-file certs/aspiredev.key "*.aspiredev.org"
+```
+
 ## Enabling the proxy in docker-compose.yml
 
 Add the following to the service you want proxied, substituting `myservice` and `myhostname.local` appropriately
@@ -34,4 +42,5 @@ Finally, add the following lines to your `/etc/hosts` file (`C:\Windows\System32
 127.0.0.1 myhostname.local 
 ::1       myhostname.local
 ```
+
 

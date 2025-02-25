@@ -4,4 +4,8 @@ cd $(dirname $0)/..
 
 docker network create traefik >/dev/null 2>&1 || true
 
+mkdir -p certs
+[[ -f certs/aspiredev.crt ]] || cp -v certs.available/aspiredev.crt certs
+[[ -f certs/aspiredev.key ]] || cp -v certs.available/aspiredev.key certs
+
 exec docker compose up -d "$@"
